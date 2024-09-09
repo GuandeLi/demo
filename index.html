@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "gray": "#E0E1E2",
+            "gray-dark": "#CACBCD",
+            "gray-dark-xl": "#BABBBC",
+            "dark": "#000000",
+            "dark-light": "rgba(0, 0, 0, 0.9)",
+            "dark-light-1xl": "rgba(0, 0, 0, 0.8)",
+            "dark-light-2xl": "rgba(0, 0, 0, 0.7)",
+            "dark-light-3xl": "rgba(0, 0, 0, 0.6)",
+            "dark-light-9xl": "rgba(0, 0, 0, 0.05)",
+            "white": "#FFFFFF",
+            "blue": "#2185D0",
+            "blue-dark": "#1678C2",
+            "blue-dark-xl": "#1A69A4",
+            "green": "#21BA45",
+            "green-dark": "#16AB39",
+            "green-dark-xl": "#198F35"
+          },
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="overflow-hidden h-screen">
+  <main class="p-4 overflow-auto h-full">
+    <section>
+      <h3 class="font-bold text-lg leading-6">Buttons</h3>
+      <hr class="my-2 text-gray" />
+      <h4 class="font-bold leading-10">Basic</h4>
+      <p class="flex flex-wrap gap-4">
+        <button class="
+            px-6 py-2 text-sm bg-gray rounded text-dark-light-3xl font-semibold transition duration-100 ease-in-out
+            hover:bg-gray-dark hover:text-dark-light-1xl
+            active:bg-gray-dark-xl active:text-dark-light
+          ">Follow</button>
+        <button class="
+            px-6 py-2 text-sm bg-blue rounded text-white font-semibold transition duration-100 ease-in-out
+            hover:bg-blue-dark
+            active:bg-blue-dark-xl
+          ">Save</button>
+        <button class="
+            px-6 py-2 text-sm bg-dark rounded text-white font-semibold transition duration-100 ease-in-out
+            hover:bg-dark-light-1xl
+            active:bg-dark-light-2xl
+          ">Okay</button>
+      </p>
+
+      <h4 class="font-bold leading-10">Animated</h4>
+      <p class="flex flex-wrap gap-4">
+        <button class="
+          px-6 py-2 text-sm bg-gray rounded text-dark-light-3xl font-semibold transition duration-100 relative group overflow-hidden ease-in-out flex items-center
+          hover:bg-gray-dark hover:text-dark-light-1xl
+          active:bg-gray-dark-xl active:text-dark-light
+        ">
+          <span class="
+            relative left-0 transition-all duration-300 ease-in-out
+            group-hover:-left-[200%]
+          ">Next</span>
+          <i class="
+            ti ti-arrow-right font-semibold absolute text-lg leading-4 -translate-x-1/2 -translate-y-1/2 top-1/2 left-[200%] transition-all duration-300 ease-in-out
+            group-hover:left-1/2
+          "></i>
+        </button>
+
+        <button class="
+          px-6 py-2 text-sm bg-gray rounded text-dark-light-3xl font-semibold transition duration-100 relative group overflow-hidden ease-in-out flex items-center
+          hover:bg-gray-dark hover:text-dark-light-1xl
+          active:bg-gray-dark-xl active:text-dark-light
+        ">
+          <i class="
+            ti ti-shopping-cart font-semibold relative text-lg leading-4 transition-all duration-300 ease-in-out top-0
+            group-hover:top-[200%]
+          "></i>
+          <span class="
+            absolute left-0 transition-all duration-300 -translate-x-1/2 -translate-y-1/2 left-1/2 top-[200%] ease-in-out
+            group-hover:top-1/2
+          ">Shop</span>
+        </button>
+
+        <button class="
+          px-6 py-2 text-sm bg-gray rounded text-dark-light-3xl font-semibold transition duration-100 relative group overflow-hidden ease-in-out flex items-center
+          hover:bg-gray-dark hover:text-dark-light-1xl
+          active:bg-gray-dark-xl active:text-dark-light
+        ">
+          <i class="
+            ti ti-send font-semibold relative text-lg leading-4 transition-all duration-300 ease-in-out top-0
+            group-hover:top-[200%]
+          "></i>
+          <span class="
+            absolute left-0 transition-all duration-300 -translate-x-1/2 -translate-y-1/2 left-1/2 -top-[200%] ease-in-out
+            group-hover:top-1/2
+          ">Send</span>
+        </button>
+
+        <button class="
+          px-6 py-2 text-sm bg-gray rounded text-dark-light-3xl font-semibold transition duration-100 relative group overflow-hidden ease-in-out flex items-center
+          hover:bg-gray-dark hover:text-dark-light-1xl
+          active:bg-gray-dark-xl active:text-dark-light
+        ">
+          <span class="
+            relative transition-all duration-300 ease-in-out
+            group-hover:scale-50 group-hover:opacity-0
+          ">Sign-up for a Pro account</span>
+          <span class="
+            absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 transition-all duration-300 ease-in-out opacity-0 scale-150
+            group-hover:scale-100 group-hover:opacity-100
+          ">$12.99 a month</span>
+        </button>
+      </p>
+
+
+      <h4 class="font-bold leading-10">Labeled</h4>
+      <p class="flex flex-wrap gap-4">
+        <button class="
+            text-sm rounded font-semibold flex
+          ">
+          <span class="
+            px-4 py-2 text-sm bg-gray rounded-s text-dark-light-3xl font-semibold transition duration-100 ease-in-out flex items-center gap-2
+            hover:bg-gray-dark hover:text-dark-light-1xl
+            active:bg-gray-dark-xl active:text-dark-light
+          "><i class="ti ti-heart text-lg leading-4"></i> Like</span>
+          <span class="
+            block border border-l-0 rounded-e border-gray p-[calc(0.5rem_-_1px)] text-sm text-dark-light-3xl
+            hover:text-blue
+          ">2,048</span>
+        </button>
+
+        <button class="
+            text-sm rounded font-semibold flex
+          ">
+          <span class="
+            block border border-r-0 rounded-s border-gray p-[calc(0.5rem_-_1px)] text-sm text-dark-light-3xl relative
+            hover:text-blue
+          ">
+            <span
+              class="absolute border-[6px] border-transparent left-full border-l-white top-1/2 -translate-y-1/2"></span>
+            2,048
+          </span>
+          <span class="
+            px-4 py-2 text-sm bg-gray rounded-e text-dark-light-3xl font-semibold transition duration-100 ease-in-out block flex items-center gap-2
+            hover:bg-gray-dark hover:text-dark-light-1xl
+            active:bg-gray-dark-xl active:text-dark-light
+          "><i class="ti ti-heart text-lg leading-4"></i> Like</span>
+        </button>
+      </p>
+
+      <h4 class="font-bold leading-10">Icon</h4>
+      <p class="flex flex-wrap gap-4">
+        <button class="
+          p-2 text-sm bg-gray rounded text-dark-light-3xl font-semibold transition duration-100 ease-in-out flex items-center
+          hover:bg-gray-dark hover:text-dark-light-1xl
+          active:bg-gray-dark-xl active:text-dark-light
+        "><i class="ti ti-cloud text-lg leading-4"></i></button>
+
+        <button class="
+          p-2 text-sm bg-gray rounded text-dark-light-3xl font-semibold transition duration-100 ease-in-out flex items-center
+          hover:bg-gray-dark hover:text-dark-light-1xl
+          active:bg-gray-dark-xl active:text-dark-light
+        "><i class="ti ti-clock text-lg leading-4"></i></button>
+      </p>
+
+      <h4 class="font-bold leading-10">Labeled Icon</h4>
+      <p class="flex flex-wrap gap-4">
+        <button class="
+          text-sm bg-gray rounded text-dark-light-3xl font-semibold transition duration-100 ease-in-out flex items-center
+          hover:bg-gray-dark hover:text-dark-light-1xl
+          active:bg-gray-dark-xl active:text-dark-light
+        ">
+          <i class="ti ti-player-pause text-lg leading-4 p-2 bg-dark-light-9xl h-full flex items-center rounded-s"></i>
+          <span class="py-2 px-6">Pause</span>
+        </button>
+
+        <button class="
+          text-sm bg-gray rounded text-dark-light-3xl font-semibold transition duration-100 ease-in-out flex items-center
+          hover:bg-gray-dark hover:text-dark-light-1xl
+          active:bg-gray-dark-xl active:text-dark-light
+        ">
+          <span class="py-2 px-6">Next</span>
+          <i class="ti ti-arrow-right text-lg leading-4 p-2 bg-dark-light-9xl h-full flex items-center rounded-e"></i>
+        </button>
+
+        <button class="
+          text-sm bg-gray rounded text-dark-light-3xl font-semibold transition duration-100 ease-in-out flex items-center
+          hover:bg-gray-dark hover:text-dark-light-1xl
+          active:bg-gray-dark-xl active:text-dark-light
+        ">
+          <span class="p-2 bg-dark-light-9xl h-full flex items-center rounded-s"><i
+              class="ti ti-loader-2 text-lg leading-4 animate-spin"></i></span>
+          <span class="py-2 px-6">Loading</span>
+        </button>
+      </p>
+
+      <h4 class="font-bold leading-10">Outlined</h4>
+      <p class="flex flex-wrap gap-4">
+        <button class="
+          px-6 py-2 text-sm rounded text-dark-light-3xl font-semibold transition duration-100 ease-in-out border border-gray
+          hover:border-gray-dark hover:text-dark-light-1xl
+          active:border-gray-dark-xl active:text-dark-light active:shadow-inner
+        ">Follow</button>
+        <button class="
+          px-6 py-2 text-sm rounded text-dark-light-3xl font-semibold transition duration-100 ease-in-out border border-gray
+          hover:bg-gray-dark hover:border-gray-dark hover:text-dark-light-1xl
+          active:bg-gray-dark-xl active:border-gray-dark-xl active:text-dark-light active:shadow-inner
+        ">Follow</button>
+      </p>
+
+      <h4 class="font-bold leading-10">Group</h4>
+      <div class="flex flex-wrap gap-4" role="doc-example">
+        <div class="flex [&_>_:first-child]:rounded-s [&_>_:last-child]:rounded-e" role="group">
+          <button class="
+            px-6 py-2 text-sm bg-gray text-dark-light-3xl font-semibold transition duration-100 ease-in-out bg-gray-dark-xl active:text-dark-light
+            hover:bg-gray-dark hover:text-dark-light-1xl
+            active:bg-gray-dark-xl active:text-dark-light
+          ">One</button>
+          <button class="
+            px-6 py-2 text-sm bg-gray text-dark-light-3xl font-semibold transition duration-100 ease-in-out
+            hover:bg-gray-dark hover:text-dark-light-1xl
+            active:bg-gray-dark-xl active:text-dark-light
+          ">Two</button>
+          <button class="
+            px-6 py-2 text-sm bg-gray text-dark-light-3xl font-semibold transition duration-100 ease-in-out
+            hover:bg-gray-dark hover:text-dark-light-1xl
+            active:bg-gray-dark-xl active:text-dark-light
+          ">Three</button>
+        </div>
+
+        <div class="flex [&_>_:first-child]:rounded-s [&_>_:last-child]:rounded-e" role="doc-example">
+          <button class="
+            p-2 text-sm bg-gray text-dark-light-3xl font-semibold transition duration-100 ease-in-out flex items-center
+            hover:bg-gray-dark hover:text-dark-light-1xl
+            active:bg-gray-dark-xl active:text-dark-light
+          "><i class="ti ti-align-left text-lg leading-4"></i></button>
+          <button class="
+            p-2 text-sm bg-gray text-dark-light-3xl font-semibold transition duration-100 ease-in-out flex items-center
+            hover:bg-gray-dark hover:text-dark-light-1xl
+            active:bg-gray-dark-xl active:text-dark-light
+          "><i class="ti ti-align-center text-lg leading-4"></i></button>
+          <button class="
+            p-2 text-sm bg-gray text-dark-light-3xl font-semibold transition duration-100 ease-in-out flex items-center bg-gray-dark-xl active:text-dark-light
+            hover:bg-gray-dark hover:text-dark-light-1xl
+            active:bg-gray-dark-xl active:text-dark-light
+          "><i class="ti ti-align-right text-lg leading-4"></i></button>
+          <button class="
+            p-2 text-sm bg-gray text-dark-light-3xl font-semibold transition duration-100 ease-in-out flex items-center
+            hover:bg-gray-dark hover:text-dark-light-1xl
+            active:bg-gray-dark-xl active:text-dark-light
+          "><i class="ti ti-align-justified text-lg leading-4"></i></button>
+        </div>
+      </div>
+
+      <h4 class="font-bold leading-10">Content</h4>
+      <div class="flex flex-wrap gap-4" role="doc-example">
+        <div class="flex gap-1 [&_>_:first-child]:rounded-s [&_>_:last-child]:rounded-e" role="group">
+          <button class="
+            px-4 py-2 text-sm bg-gray text-dark-light-3xl font-semibold transition duration-100 ease-in-out relative
+            hover:bg-gray-dark hover:text-dark-light-1xl
+            active:bg-gray-dark-xl active:text-dark-light
+          ">
+            <span
+              class="absolute left-[calc(100%_-_0.625rem)] w-6 h-6 top-1/2 -translate-y-1/2 bg-white rounded-full text-gray-dark-xl flex items-center justify-center">or</span>
+            Cancel
+          </button>
+          <button class="
+            px-4 py-2 text-sm bg-green text-white font-semibold transition duration-100 ease-in-out
+            hover:bg-green-dark
+            active:bg-green-dark-xl
+          ">Save</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-8">
+      <h3 class="font-bold text-lg leading-6">Popup</h3>
+      <hr class="my-2 text-gray" />
+
+      <button class="
+        px-6 py-2 text-sm bg-gray rounded text-dark-light-3xl font-semibold transition duration-100 ease-in-out
+        hover:bg-gray-dark hover:text-dark-light-1xl
+        active:bg-gray-dark-xl active:text-dark-light
+      " onclick="showPopup()">Pop</button>
+
+      <div aria-label="popup"
+        class="z-10 scale-0 absolute flex items-center justify-center inset-0 opacity-0 transition duration-300 ease-in-out"
+        id="popup">
+        <div aria-label="backdrop" class="fixed inset-0 bg-dark-light-3xl z-[-1]" onclick="hidePopup()">
+        </div>
+        <div aria-label="card" class="w-80 rounded-md bg-white p-4">
+          <h4>Confirm</h4>
+          <p class="py-4 text-gray-dark-xl">Are you sure?</p>
+          <div class="flex gap-1 [&_>_:first-child]:rounded-s [&_>_:last-child]:rounded-e justify-end" role="group">
+            <button class="
+              px-4 py-2 text-sm bg-gray text-dark-light-3xl font-semibold transition duration-100 ease-in-out relative
+              hover:bg-gray-dark hover:text-dark-light-1xl
+              active:bg-gray-dark-xl active:text-dark-light
+            " onclick="hidePopup()">
+              <span
+                class="absolute left-[calc(100%_-_0.625rem)] w-6 h-6 top-1/2 -translate-y-1/2 bg-white rounded-full text-gray-dark-xl flex items-center justify-center">or</span>
+              Cancel
+            </button>
+            <button class="
+              px-4 py-2 text-sm bg-green text-white font-semibold transition duration-100 ease-in-out
+              hover:bg-green-dark
+              active:bg-green-dark-xl
+            " onclick="hidePopup()">Yes</button>
+          </div>
+        </div>
+      </div>
+
+      <button class="
+        px-6 py-2 text-sm bg-gray rounded text-dark-light-3xl font-semibold transition duration-100 ease-in-out
+        hover:bg-gray-dark hover:text-dark-light-1xl
+        active:bg-gray-dark-xl active:text-dark-light
+      " onclick="showPopup2()">Pop</button>
+
+      <div aria-label="popup" class="z-10 hidden absolute flex items-center justify-center inset-0" id="popup2">
+        <div aria-label="backdrop"
+          class="fixed inset-0 bg-dark-light-3xl z-[-1] opacity-0 transition duration-300 ease-in-out"
+          onclick="hidePopup2()">
+        </div>
+        <div aria-label="card"
+          class="w-80 rounded-md bg-white p-4 relative -top-10 transition-[opacity,top] duration-300 ease-in-out opacity-0 delay-300">
+          <h4>Confirm</h4>
+          <p class="py-4 text-gray-dark-xl">Are you sure?</p>
+          <div class="flex gap-1 [&_>_:first-child]:rounded-s [&_>_:last-child]:rounded-e justify-end" role="group">
+            <button class="
+              px-4 py-2 text-sm bg-gray text-dark-light-3xl font-semibold transition duration-100 ease-in-out relative
+              hover:bg-gray-dark hover:text-dark-light-1xl
+              active:bg-gray-dark-xl active:text-dark-light
+            " onclick="hidePopup2()">
+              <span
+                class="absolute left-[calc(100%_-_0.625rem)] w-6 h-6 top-1/2 -translate-y-1/2 bg-white rounded-full text-gray-dark-xl flex items-center justify-center">or</span>
+              Cancel
+            </button>
+            <button class="
+              px-4 py-2 text-sm bg-green text-white font-semibold transition duration-100 ease-in-out
+              hover:bg-green-dark
+              active:bg-green-dark-xl
+            " onclick="hidePopup2()">Yes</button>
+          </div>
+        </div>
+      </div>
+
+
+      <button class="
+        px-6 py-2 text-sm bg-gray rounded text-dark-light-3xl font-semibold transition duration-100 ease-in-out
+        hover:bg-gray-dark hover:text-dark-light-1xl
+        active:bg-gray-dark-xl active:text-dark-light
+      " onclick="showPopup3()">Pop</button>
+      <div aria-label="popup" class="z-10 absolute hidden inset-0" id="popup3">
+        <div aria-label="backdrop"
+          class="fixed inset-0 bg-dark-light-3xl z-[-1] opacity-0 transition duration-300 ease-in-out"
+          onclick="hidePopup3()">
+        </div>
+        <div aria-label="card"
+          class="w-80 p-4 transition-[left] duration-300 ease-in-out absolute h-full -left-full bg-[url('https://pic1.zhimg.com/50/v2-1e19ac9fffec5d6c3801ee7d7dc1c9ac_hd.jpg')] bg-cover">
+        </div>
+      </div>
+
+      <button class="
+        px-6 py-2 text-sm bg-gray rounded text-dark-light-3xl font-semibold transition duration-100 ease-in-out
+        hover:bg-gray-dark hover:text-dark-light-1xl
+        active:bg-gray-dark-xl active:text-dark-light
+      " onclick="showPopup4()">Pop</button>
+      <div aria-label="popup" class="z-10 absolute hidden inset-0 overflow-hidden" id="popup4">
+        <div aria-label="backdrop"
+          class="fixed inset-0 bg-dark-light-3xl z-[-1] opacity-0 transition duration-300 ease-in-out"
+          onclick="hidePopup4()">
+        </div>
+        <div aria-label="card"
+          class="w-80 p-4 transition-[bottom] duration-300 ease-in-out absolute -bottom-full h-80 w-full bg-[url('https://img2.baidu.com/it/u=3789649883,1116382480&fm=253&fmt=auto&app=138&f=JPEG?w=1180&h=307')] bg-cover">
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-8">
+      <h3 class="font-bold text-lg leading-6">Tooltip</h3>
+      <hr class="my-2 text-gray" />
+      <button class="
+        px-6 py-2 text-sm bg-gray rounded text-dark-light-3xl font-semibold transition duration-100 ease-in-out relative group
+        hover:bg-gray-dark hover:text-dark-light-1xl
+        active:bg-gray-dark-xl active:text-dark-light
+      ">
+        <div aria-label="Tooltip" class="
+          absolute -top-0 -z-10 opacity-0 bg-dark-light text-white left-1/2 -translate-x-1/2 px-4 py-1 rounded transition-[top,z-index,opacity] duration-100 ease-in-out
+          group-hover:-top-full group-hover:z-10 group-hover:opacity-100
+        ">
+          <div aria-label="arrow"
+            class="absolute border-[6px] border-transparent top-full left-1/2 -translate-x-1/2 border-t-dark-light">
+          </div>
+          Top
+        </div>
+        Top
+      </button>
+
+
+      <button class="
+        px-6 py-2 text-sm bg-gray rounded text-dark-light-3xl font-semibold transition duration-100 ease-in-out relative group
+        hover:bg-gray-dark hover:text-dark-light-1xl
+        active:bg-gray-dark-xl active:text-dark-light
+      ">
+        <div aria-label="Tooltip" class="
+          absolute -bottom-0 -z-10 opacity-0 bg-dark-light text-white left-1/2 -translate-x-1/2 px-4 py-1 rounded transition-[bottom,z-index,opacity] duration-100 ease-in-out
+          group-hover:-bottom-full group-hover:z-10 group-hover:opacity-100
+        ">
+          <div aria-label="arrow"
+            class="absolute border-[6px] border-transparent bottom-full left-1/2 -translate-x-1/2 border-b-dark-light">
+          </div>
+          Bottom
+        </div>
+        Bottom
+      </button>
+
+      <button class="
+        px-6 py-2 text-sm bg-gray rounded text-dark-light-3xl font-semibold transition duration-100 ease-in-out relative group
+        hover:bg-gray-dark hover:text-dark-light-1xl
+        active:bg-gray-dark-xl active:text-dark-light
+      ">
+        <div aria-label="Tooltip" class="
+          absolute -left-0 -z-10 opacity-0 bg-dark-light text-white top-1/2 -translate-y-1/2 px-4 py-1 rounded transition-[left,z-index,opacity] duration-100 ease-in-out
+          group-hover:-left-full group-hover:z-10 group-hover:opacity-100
+        ">
+          <div aria-label="arrow"
+            class="absolute -right-[12px] border-[6px] border-transparent border-l-dark-light top-1/2 -translate-y-1/2">
+          </div>
+          Left
+        </div>
+        Left
+      </button>
+
+      <button class="
+        px-6 py-2 text-sm bg-gray rounded text-dark-light-3xl font-semibold transition duration-100 ease-in-out relative group
+        hover:bg-gray-dark hover:text-dark-light-1xl
+        active:bg-gray-dark-xl active:text-dark-light
+      ">
+        <div aria-label="Tooltip" class="
+          absolute -right-0 -z-10 opacity-0 bg-dark-light text-white top-1/2 -translate-y-1/2 px-4 py-1 rounded transition-[right,z-index,opacity] duration-100 ease-in-out
+          group-hover:-right-full group-hover:z-10 group-hover:opacity-100
+        ">
+          <div aria-label="arrow"
+            class="absolute -left-[12px] border-[6px] border-transparent border-r-dark-light top-1/2 -translate-y-1/2">
+          </div>
+          Right
+        </div>
+        Right
+      </button>
+
+    </section>
+
+    <section class="mt-8">
+      <h3 class="font-bold text-lg leading-6">Select</h3>
+      <hr class="my-2 text-gray" />
+      <div class="flex flex-wrap gap-2" role="group">
+        <div aria-label="Select" class="relative w-fit">
+          <input type="text" class="border border-gray rounded [&:focus]:outline-0 px-4 py-2 cursor-pointer"
+            onclick="toggleUl()" value="Dogs" id="selectInput" readonly placeholder="Select">
+          <i class="ti ti-caret-down-filled absolute right-4 top-1/2 -translate-y-1/2 transition-[transform] duration-300 ease-in-out"
+            id="selectIcon"></i>
+          <div aria-label="Options" class="absolute w-full top-[calc(100%_+_0.5rem)] hidden z-10" id="options">
+            <div aria-label="cover" class="inset-0 z-[-1] fixed" onclick="toggleUl(true)"></div>
+
+            <ul
+              class="bg-white rounded shadow-md shadow-white-500 [&_>_:last-child]-rounded-b overflow-hidden transition-[top,opacity,transform] duration-300 ease-in-out relative -top-10 opacity-0 scale-50"
+              id="ul">
+              <li class="
+                py-2 px-4 cursor-pointer
+                hover:bg-gray
+              " onclick="setSelect(this)">Puppies</li>
+              <li class="
+                py-2 px-4 cursor-pointer
+                hover:bg-gray
+              " onclick="setSelect(this)">Kittens</li>
+              <li class="
+                py-2 px-4 cursor-pointer
+                hover:bg-gray
+              " onclick="setSelect(this)">The bears</li>
+              <li class="
+                py-2 px-4 cursor-pointer
+                hover:bg-gray
+              " onclick="setSelect(this)">The chicks</li>
+
+            </ul>
+          </div>
+        </div>
+
+        <div aria-label="Select" class="relative w-fit">
+          <input type="text" class="border border-gray rounded [&:focus]:outline-0 px-4 pr-8 py-2 cursor-pointer"
+            onclick="toggleUl2()" id="selectInput2" readonly placeholder="Multiple Select">
+          <i class="ti ti-caret-down-filled absolute right-4 top-1/2 -translate-y-1/2 transition-[transform] duration-300 ease-in-out"
+            id="selectIcon2"></i>
+          <div aria-label="Options" class="absolute w-full top-[calc(100%_+_0.5rem)] hidden z-10" id="options2">
+            <div aria-label="cover" class="inset-0 z-[-1] fixed" onclick="toggleUl2(true)"></div>
+
+            <ul
+              class="bg-white rounded shadow-md shadow-white-500 [&_>_:last-child]-rounded-b overflow-hidden transition-[top,opacity,transform] duration-300 ease-in-out relative -top-10 opacity-0 scale-50"
+              id="ul2">
+              <li class="
+                py-2 px-4 cursor-pointer
+                hover:bg-gray
+              " onclick="setSelect2(this)">Puppies</li>
+              <li class="
+                py-2 px-4 cursor-pointer
+                hover:bg-gray
+              " onclick="setSelect2(this)">Kittens</li>
+              <li class="
+                py-2 px-4 cursor-pointer
+                hover:bg-gray
+              " onclick="setSelect2(this)">The bears</li>
+              <li class="
+                py-2 px-4 cursor-pointer
+                hover:bg-gray
+              " onclick="setSelect2(this)">The chicks</li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-8">
+      <h3 class="font-bold text-lg leading-6">Grid</h3>
+      <hr class="my-2 text-gray" />
+      <div role="group" class="flex flex-wrap">
+        <div aria-label="box" class="flex items-center justify-center h-80 w-full sm:w-full md:w-1/2 lg:w-1/3 xl:w-1/4 2xl:w-1/4 mt-4">
+          <div aria-label="box" class="flex items-center justify-center h-full w-full m-4 rounded bg-[url('https://img1.baidu.com/it/u=782800191,714404126&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500')] bg-cover">
+          </div>
+        </div>
+        <div aria-label="box" class="flex items-center justify-center h-80 w-full sm:w-full md:w-1/2 lg:w-1/3 xl:w-1/4 2xl:w-1/4 mt-4">
+          <div aria-label="box" class="flex items-center justify-center h-full w-full m-4 rounded bg-[url('https://img1.baidu.com/it/u=488261330,3846351210&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500')] bg-cover">
+          </div>
+        </div>
+        <div aria-label="box" class="flex items-center justify-center h-80 w-full sm:w-full md:w-1/2 lg:w-1/3 xl:w-1/4 2xl:w-1/4 mt-4">
+          <div aria-label="box" class="flex items-center justify-center h-full w-full m-4 rounded bg-[url('https://img2.baidu.com/it/u=2009665521,3145869062&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500')] bg-cover">
+          </div>
+        </div>
+        <div aria-label="box" class="flex items-center justify-center h-80 w-full sm:w-full md:w-1/2 lg:w-1/3 xl:w-1/4 2xl:w-1/4 mt-4">
+          <div aria-label="box" class="flex items-center justify-center h-full w-full m-4 rounded bg-[url('https://img2.baidu.com/it/u=2615317238,1073915742&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500')] bg-cover">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function showPopup() {
+      const element = document.getElementById("popup");
+      element.classList.remove("scale-0");
+      element.classList.remove("opacity-0");
+      element.classList.add("opacity-100");
+    }
+
+    function hidePopup() {
+      const element = document.getElementById("popup");
+      element.classList.remove("opacity-100");
+      element.classList.add("scale-0");
+      element.classList.add("opacity-0");
+    }
+
+    function showPopup2() {
+      const element = document.getElementById("popup2");
+      element.classList.remove("hidden");
+      setTimeout(() => {
+        element.children[0].classList.remove("opacity-0");
+        element.children[1].classList.remove("-top-10");
+        element.children[1].classList.add("top-0");
+        element.children[1].classList.remove("opacity-0");
+      }, 0);
+    }
+
+    function hidePopup2() {
+      const element = document.getElementById("popup2");
+      element.children[1].classList.add("-top-10");
+      element.children[1].classList.add("opacity-0");
+      element.children[1].classList.remove("top-0");
+
+
+      setTimeout(() => {
+        element.children[0].classList.add("opacity-0");
+      }, 300);
+
+      setTimeout(() => {
+        element.classList.add("hidden");
+      }, 600);
+    }
+
+    function showPopup3() {
+      const element = document.getElementById("popup3");
+      element.classList.remove("hidden");
+      setTimeout(() => {
+        element.children[0].classList.remove("opacity-0");
+        element.children[1].classList.remove("-left-full");
+        element.children[1].classList.add("left-0");
+      }, 0);
+    }
+
+    function hidePopup3() {
+      const element = document.getElementById("popup3");
+      element.children[0].classList.add("opacity-0");
+      element.children[1].classList.add("-left-full");
+      element.children[1].classList.remove("left-0");
+      setTimeout(() => {
+        element.classList.add("hidden");
+      }, 300
+      );
+    }
+
+    function showPopup4() {
+      const element = document.getElementById("popup4");
+      element.classList.remove("hidden");
+      setTimeout(() => {
+        element.children[0].classList.remove("opacity-0");
+        element.children[1].classList.remove("-bottom-full");
+        element.children[1].classList.add("bottom-0");
+      }, 0);
+    }
+
+    function hidePopup4() {
+      const element = document.getElementById("popup4");
+      element.children[0].classList.add("opacity-0");
+      element.children[1].classList.add("-bottom-full");
+      element.children[1].classList.remove("bottom-0");
+      setTimeout(() => {
+        element.classList.add("hidden");
+      }, 300
+      );
+    }
+
+    function toggleUl(isCover) {
+      const options = document.getElementById("options");
+      const element = document.getElementById("ul");
+      const icon = document.getElementById("selectIcon");
+      if (options.classList.contains("hidden") && !isCover) {
+        options.classList.remove("hidden");
+        setTimeout(() => {
+          element.classList.remove("opacity-0");
+          element.classList.remove("-top-10");
+          element.classList.remove("scale-50");
+          element.classList.add("top-0");
+          element.classList.add("scale-100");
+          icon.classList.add("rotate-180");
+        }, 0);
+      } else {
+        element.classList.remove("top-0");
+        element.classList.remove("scale-100");
+        icon.classList.remove("rotate-180");
+        element.classList.add("opacity-0");
+        element.classList.add("-top-10");
+        element.classList.add("scale-50");
+        setTimeout(() => {
+          options.classList.add("hidden");
+        }, 300);
+      }
+    }
+
+    function toggleUl2(isCover) {
+      const options = document.getElementById("options2");
+      const element = document.getElementById("ul2");
+      const icon = document.getElementById("selectIcon2");
+      if (options.classList.contains("hidden") && !isCover) {
+        options.classList.remove("hidden");
+        setTimeout(() => {
+          element.classList.remove("opacity-0");
+          element.classList.remove("-top-10");
+          element.classList.remove("scale-50");
+          element.classList.add("top-0");
+          element.classList.add("scale-100");
+          icon.classList.add("rotate-180");
+        }, 0);
+      } else {
+        element.classList.remove("top-0");
+        element.classList.remove("scale-100");
+        icon.classList.remove("rotate-180");
+        element.classList.add("opacity-0");
+        element.classList.add("-top-10");
+        element.classList.add("scale-50");
+        setTimeout(() => {
+          options.classList.add("hidden");
+        }, 300);
+      }
+    }
+
+    function setSelect(e) {
+      const element = document.getElementById("selectInput");
+      element.value = e.innerHTML;
+      toggleUl();
+    }
+
+    let selectValues = [];
+
+    function setSelect2(e) {
+      const element = document.getElementById("selectInput2");
+      if (e.classList.contains("bg-gray-dark")) {
+        e.classList.remove("bg-gray-dark");
+        selectValues = selectValues.filter(text => text != e.innerHTML);
+        element.value = getValue();
+      } else {
+        e.classList.add("bg-gray-dark");
+        selectValues.push(e.innerHTML);
+        element.value = getValue();
+      }
+    }
+
+    function getValue() {
+      let valueStr = "";
+      for (const value of selectValues) {
+        if (valueStr) {
+          valueStr += ", ";
+        }
+        valueStr += value;
+      }
+      return valueStr;
+    }
+  </script>
+</body>
+
+</html>
