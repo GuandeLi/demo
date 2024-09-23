@@ -9,6 +9,26 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
     />
+    <style>
+      ::-webkit-scrollbar {
+        width: 20px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background-color: transparent;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background-color: #d6dee1;
+        border-radius: 20px;
+        border: 6px solid transparent;
+        background-clip: content-box;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background-color: #a8bbbf;
+      }
+    </style>
     <script>
       tailwind.config = {
         theme: {
@@ -48,7 +68,7 @@
         This is a pure tailiwind collection of UI components for educational &
         learning purpose
       </h2>
-      <!-- <section>
+      <section>
         <h3 class="font-bold text-lg leading-6">Buttons</h3>
         <hr class="my-2 text-gray" />
         <h4 class="font-bold leading-10">Basic</h4>
@@ -653,7 +673,7 @@
             ></div>
           </div>
         </div>
-      </section> -->
+      </section>
 
       <section class="my-4 h-[calc(100vh_-_8rem)] bg-gray w-full p-4">
         <div class="rounded shadow-lg h-full bg-white flex flex-col">
@@ -1280,19 +1300,23 @@
                   </li>
                 </ul>
               </div>
-              <div class="shadow-md h-16 mb-8 mx-8 bg-white rounded p-4 flex items-center gap-2">
-                <input type="text" class="
-                  h-full flex-1
-                  focus-visible:outline-0
-                  [&::placeholder]:transition focus:[&::placeholder]:translate-x-1
-                " placeholder="Type your message here...">
+              <div
+                class="shadow-md h-16 mb-8 mx-8 bg-white rounded p-4 flex items-center gap-2"
+              >
+                <input
+                  type="text"
+                  class="h-full flex-1 focus-visible:outline-0 [&::placeholder]:transition focus:[&::placeholder]:translate-x-1"
+                  placeholder="Type your message here..."
+                />
                 <button class="rounded-full w-10 h-10 hover:bg-gray">
                   <i class="ti ti-microphone text-[#444050] text-lg"></i>
                 </button>
                 <button class="rounded-full w-10 h-10 hover:bg-gray">
                   <i class="ti ti-paperclip text-[#444050] text-lg"></i>
                 </button>
-                <button class="rounded bg-[#7367F0] px-4 py-2 text-white flex gap-2 items-center shadow-md">
+                <button
+                  class="rounded bg-[#7367F0] px-4 py-2 text-white flex gap-2 items-center shadow-md"
+                >
                   <span>Send</span>
                   <i class="ti ti-send"></i>
                 </button>
